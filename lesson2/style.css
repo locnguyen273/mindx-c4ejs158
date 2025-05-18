@@ -1,0 +1,92 @@
+/* style cho thẻ p có class là fullName => .fullName {}, còn id => #fullName {} */
+.fullName {
+  color: #ffffff;
+  background: linear-gradient(45deg, #1321e3, #52b3fb);
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+#fullName {
+  font-size: 32px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.img-doraemon {
+  width: 160px;
+  height: auto;
+  border: 1px solid red;
+  border-radius: 8px;
+  cursor: not-allowed;
+}
+
+table,
+th,
+td {
+  border: 1px solid red;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: lightblue;
+}
+
+/* .table-container .table-header-item {
+  font-weight: 100;
+  color: green;
+} */
+
+.table-container th {
+  font-weight: 100;
+  color: green;
+  font-size: 14px;
+}
+
+.form-custom {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  margin-top: 16px;
+  padding: 8px;
+  width: 200px;
+  height: auto;
+}
+
+.form-custom .form-custom-title {
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 0;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-custom .form-custom-email-control,
+.form-custom .form-custom-phone-control,
+.form-custom .form-custom-text-area-control {
+  margin-bottom: 8px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid lightblue;
+  padding: 2px 4px;
+  width: 100%;
+  max-width: 190px;
+}
+
+.form-custom .form-custom-btn-contact {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 24px;
+  background: blue;
+  color: white;
+}
+
+.form-custom .form-custom-btn-contact:hover {
+  cursor: pointer;
+  background: red;
+}
