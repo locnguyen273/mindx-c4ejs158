@@ -63,20 +63,107 @@
 // }
 
 // bài 2
-const secondsInput = prompt("Nhập số giây:");
-const seconds = parseFloat(secondsInput);
+// const secondsInput = prompt("Nhập số giây:");
+// const seconds = parseFloat(secondsInput);
 
-function convertSecondsToTime(seconds) {
-  const hours = Math.floor(seconds / 3600); // number 3
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const secondsLeft = seconds % 60;
-  return `${String(hours).padStart(2, "0")} giờ : ${String(minutes).padStart(2, "0")} phút : ${String(secondsLeft).padStart(2, "0")} giấy`;
+// function convertSecondsToTime(seconds) {
+//   const hours = Math.floor(seconds / 3600); // number 3
+//   const minutes = Math.floor((seconds % 3600) / 60);
+//   const secondsLeft = seconds % 60;
+//   return `${String(hours).padStart(2, "0")} giờ : ${String(minutes).padStart(2, "0")} phút : ${String(secondsLeft).padStart(2, "0")} giấy`;
+// }
+
+// if (!isNaN(seconds) && seconds >= 0) { // phủ định của không => có synctax !(của cái gì đó)
+//   alert(
+//     `Kết quả sau khi chuyển đổi ${seconds} là: ${convertSecondsToTime(seconds)}`
+//   );
+// } else {
+//   alert("Vui lòng nhập một số nguyên không âm hợp lệ.");
+// }
+
+// bài 3
+// const base = prompt("Nhập cơ số:");
+// const baseInput = parseFloat(base);
+// const exponent = prompt("Nhập số mũ:");
+// const exponentInput = parseFloat(exponent);
+
+// const result = Math.pow(base, exponent);
+// if (!isNaN(baseInput) && !isNaN(exponentInput)) {
+//   alert(`kết quả tính lũy thừa của ${base} ^ ${exponent} = ${result}`);
+// }
+
+// bài 4 tính trung bình cộng
+function calculateAverage() {
+  const numberOne = parseFloat(document.getElementById("numberOne").value);
+  const numberTwo = parseFloat(document.getElementById("numberTwo").value);
+  const numberThree = parseFloat(document.getElementById("numberThree").value);
+  const average = (numberOne + numberTwo + numberThree) / 3;
+  document.getElementById("result").innerText = `Trung bình là: ${average}`;
 }
 
-if (!isNaN(seconds) && seconds >= 0) { // phủ định của không => có synctax !(của cái gì đó)
-  alert(
-    `Kết quả sau khi chuyển đổi ${seconds} là: ${convertSecondsToTime(seconds)}`
-  );
-} else {
-  alert("Vui lòng nhập một số nguyên không âm hợp lệ.");
+// bài 5 tính khoảng cách giữa 2 điểm
+function calculateDistance() {
+  let x1 = parseFloat(document.getElementById("x1").value);
+  let y1 = parseFloat(document.getElementById("y1").value);
+  let x2 = parseFloat(document.getElementById("x2").value);
+  let y2 = parseFloat(document.getElementById("y2").value);
+
+  let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+  document.getElementById(
+    "resultDistance"
+  ).innerText = `Khoảng cách giữa hai điểm là: ${distance}`;
 }
+
+// bài 6 so sánh số lớn nhất trong 3 số user nhập vào
+// const numberOneInput = parseFloat(prompt("Nhập số thứ nhất:"));
+// const numberTwoInput = parseFloat(prompt("Nhập số thứ hai:"));
+// const numberThreeInput = parseFloat(prompt("Nhập số thứ ba:"));
+
+// const isFirstLargest = numberOneInput > numberTwoInput && numberOneInput > numberThreeInput;
+// if (
+//   !isNaN(numberOneInput) &&
+//   !isNaN(numberTwoInput) &&
+//   !isNaN(numberThreeInput)
+// ) {
+//   if (isFirstLargest) {
+//     alert(`Số thứ nhất là lớn nhất: ${isFirstLargest}`);
+//   } else alert(`Số thứ nhất là lớn nhất: ${isFirstLargest}`);
+// }
+
+// bài 7
+// const input1 = prompt("Nhập giá trị thứ nhất:");
+// const input2 = prompt("Nhập giá trị thứ hai:");
+
+// const  isEqual = input1 === input2;
+
+// alert(`Hai giá trị giống nhau: ${isEqual}`);
+
+// bài 8 check số nguyên dương
+// const numberIsPositive = prompt("Nhập một số bất kỳ:");
+// const numberIsPositiveInput = parseFloat(numberIsPositive);
+
+// const isPositiveChecked = number > 0;
+// alert(`Số vừa nhập là số dương: ${isPositiveChecked}`);
+
+// bài 9 check leap year
+function checkLeapYear() {
+  const year = parseInt(document.getElementById("yearInput").value);
+  const isLeap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  document.getElementById("resultLeapYear").innerText =
+    year + (isLeap ? " là năm nhuận" : " không phải là năm nhuận");
+}
+
+// bài 10 so sánh thời gian
+const hourOne = parseInt(prompt("Nhập giờ của thời gian thứ nhất (0-23):"));
+const minuteOne = parseInt(prompt("Nhập phút của thời gian thứ nhất (0-59):"));
+
+const hourTwo = parseInt(prompt("Nhập giờ của thời gian thứ hai (0-23):"));
+const minuteTwo = parseInt(prompt("Nhập phút của thời gian thứ hai (0-59):"));
+
+// Chuyển đổi sang tổng số phút
+const totalMinutesOne = hourOne * 60 + minuteOne;
+const totalMinutesTwo = hourTwo * 60 + minuteTwo;
+
+const isLater = totalMinutesOne > totalMinutesTwo;
+
+alert(`Thời gian thứ nhất muộn hơn thời gian thứ hai: ${isLater}`);
