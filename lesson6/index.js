@@ -82,12 +82,12 @@
 // }
 
 // bài 3
-// const base = prompt("Nhập cơ số:");
+// const base = prompt("Nhập cơ số:"); // 3 ^ 2
 // const baseInput = parseFloat(base);
 // const exponent = prompt("Nhập số mũ:");
 // const exponentInput = parseFloat(exponent);
 
-// const result = Math.pow(base, exponent);
+// const result = Math.pow(baseInput, exponentInput);
 // if (!isNaN(baseInput) && !isNaN(exponentInput)) {
 //   alert(`kết quả tính lũy thừa của ${base} ^ ${exponent} = ${result}`);
 // }
@@ -118,8 +118,10 @@ function calculateDistance() {
 // const numberOneInput = parseFloat(prompt("Nhập số thứ nhất:"));
 // const numberTwoInput = parseFloat(prompt("Nhập số thứ hai:"));
 // const numberThreeInput = parseFloat(prompt("Nhập số thứ ba:"));
-
-// const isFirstLargest = numberOneInput > numberTwoInput && numberOneInput > numberThreeInput;
+// const isFirstLargest = numberOneInput > numberTwoInput && numberOneInput > numberThreeInput; 
+// // true || false => true
+// // true && true => true 
+// //true && false => false false && false => false
 // if (
 //   !isNaN(numberOneInput) &&
 //   !isNaN(numberTwoInput) &&
@@ -154,16 +156,16 @@ function checkLeapYear() {
 }
 
 // bài 10 so sánh thời gian
-const hourOne = parseInt(prompt("Nhập giờ của thời gian thứ nhất (0-23):"));
-const minuteOne = parseInt(prompt("Nhập phút của thời gian thứ nhất (0-59):"));
+// const hourOne = parseInt(prompt("Nhập giờ của thời gian thứ nhất (0-23):"));
+// const minuteOne = parseInt(prompt("Nhập phút của thời gian thứ nhất (0-59):"));
 
-const hourTwo = parseInt(prompt("Nhập giờ của thời gian thứ hai (0-23):"));
-const minuteTwo = parseInt(prompt("Nhập phút của thời gian thứ hai (0-59):"));
+// const hourTwo = parseInt(prompt("Nhập giờ của thời gian thứ hai (0-23):"));
+// const minuteTwo = parseInt(prompt("Nhập phút của thời gian thứ hai (0-59):"));
 
-// Chuyển đổi sang tổng số phút
-const totalMinutesOne = hourOne * 60 + minuteOne;
-const totalMinutesTwo = hourTwo * 60 + minuteTwo;
+// // Chuyển đổi sang tổng số phút
+// const totalMinutesOne = hourOne * 60 + minuteOne;
+// const totalMinutesTwo = hourTwo * 60 + minuteTwo;
 
-const isLater = totalMinutesOne > totalMinutesTwo;
+// const isLater = totalMinutesOne > totalMinutesTwo;
 
-alert(`Thời gian thứ nhất muộn hơn thời gian thứ hai: ${isLater}`);
+// alert(`Thời gian thứ nhất muộn hơn thời gian thứ hai: ${isLater}`);
